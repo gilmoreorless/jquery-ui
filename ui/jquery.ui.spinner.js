@@ -124,7 +124,7 @@ $.widget('ui.spinner', {
 					self._change(event);					
 				}
 			})
-			.bind("mouseenter", function() {
+			.bind("mouseenter", function(event) {
 				if (self.options.disabled) {
 					return;
 				}
@@ -136,7 +136,7 @@ $.widget('ui.spinner', {
 					self._repeat(null, $(this).hasClass('ui-spinner-up') ? 1 : -1, event);
 				}
 			})
-			.bind("mouseleave", function() {
+			.bind("mouseleave", function(event) {
 				if (self.spinning) {
 					self._stop(event);
 					self._change(event);
